@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    .col-xs-12.col-sm-8(ng-controller="mobilesListCtrl")
+      .error {{ message }} 
+      label(for="filter") Filter results
+      input#filter(type="text", name="filter", ng-model="textFilter")
+      .col-xs-12(ng-repeat="mobile in mobiles_list | filter: { name: textFilter}") 
+          h1 {{ mobile.name }} 
+          p Price: {{ mobile.price | currency:"$" }}
+          p Description: {{ mobile.description }}

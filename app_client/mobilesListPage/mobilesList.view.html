@@ -1,0 +1,45 @@
+<div ng-controller="mobilesListCtrl">
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb" class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="breadcrumb-header">{{bread_title}}</h3>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /BREADCRUMB -->
+    <div class="error">{{ message }}</div>
+    <div class="col-md-4">
+    </div>
+
+    <!-- SEARCH BAR -->
+    <div class="col-md-8">
+        <div class="header-search">
+            <form>
+                <select class="input-select" ng-model="category" ng-change="changedCategory()">
+								<option value="Mobiles">Mobiles</option>
+                                <option value="Laptops">Laptops</option>
+                                <option value="Accessories">Accessories</option>
+								</select>
+                <input id="filter" type="text" name="filter" ng-model="textFilter" placeholder="Search here" style="height: 40px;border: 1px solid #E4E7ED;">
+                <button class="search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+    <!-- /SEARCH BAR -->
+
+    <div class="col-xs-12" ng-repeat="mobile in mobiles_list | filter: { name: textFilter}">
+        <h1><a href="/mobile/{{ mobile._id }}">{{ mobile.name }}</a></h1>
+        <p>Price: {{ mobile.price | currency:"$" }}</p>
+        <p>Description: {{ mobile.description }}</p>
+        <p>Rating: {{ mobile.rating }}/5</p>
+        <div class="product-rating" rating-stars rating2="mobile.rating"></div>
+        <hr/>
+    </div>
+</div>

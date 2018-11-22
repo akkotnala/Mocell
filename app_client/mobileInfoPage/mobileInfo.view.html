@@ -1,0 +1,85 @@
+<div ng-controller="mobilesInfoCtrl">
+         <!-- BREADCRUMB -->
+		<div id="breadcrumb" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="breadcrumb-header">{{vm.bread_title}}</h3>
+                        	<ul class="breadcrumb-tree">
+							<li><a href="/mobile/read">{{vm.bread_title}} List</a></li>
+							<li class="active">Info</li>
+                                </ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->
+    <div class="error">{{ vm.message }}</div>
+    <div class="col-xs-12">
+
+
+        <div class="product-details">
+            <h2 class="product-name">{{ vm.mobile.name }}</h2>
+            <div>
+                <div class="rating" rating-stars rating2="vm.mobile.rating" class="product-rating">
+                    Rating: {{ vm.mobile.rating }}/5
+                </div>
+                <a class="review-link" href="#">{{vm.mobile.reviews.length}} Review(s) | Add your review</a>
+            </div>
+            <div>
+                <h3 class="product-price">{{ vm.mobile.price | currency:"$" }}</h3>
+                <span class="product-available">In Stock</span>
+            </div>
+        </div>
+        <p>{{ vm.mobile.description }}</p>
+    </div>
+    <hr/><hr/><hr/><hr/><hr/>
+        <div id="product-tab">
+            <!-- product tab nav -->
+            <ul class="tab-nav">
+                <li class="active"><a data-toggle="tab" href="#tab1">Reviews</a></li>
+            </ul>
+            <!-- /product tab nav -->
+
+            <!-- product tab content -->
+            <div class="tab-content">
+                <!-- tab1  -->
+                <div id="tab1" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+                        <!-- Reviews -->
+                        <div class="col-md-6">
+                            <div id="reviews">
+                                <ul class="reviews" ng-repeat="review in vm.mobile.reviews">
+                                    <li>
+                                        <div class="review-heading">
+                                            <h5 class="name">{{ review.author }}</h5>
+                                            <p class="date">{{ review.createdOn | date: "d MMM yyyy"}}</p>
+                                            <div class="review-rating" class="rating" rating-stars rating2="review.rating">{{ review.rating }}/5
+                                            </div>
+                                        </div>
+                                        <div class="review-body">
+                                            <p>{{ review.reviewText }}</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                
+<button class="btn btn-danger btn-block" style="margin: auto" ng-click="vm.popupReviewForm()"><i class="fa fa-book"></i> Add Review </button>
+                            </div>
+                            <!-- /Reviews -->
+                            <div class="col-md-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /tab1  -->
+            </div>
+            <!-- /product tab content  -->
+        </div>
+
+</div>

@@ -1,0 +1,29 @@
+doctype html
+html(ng-app='myApp')
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    a(href="/") index
+    br
+    a(href="/mobile/read") Mobiles List
+    br
+    a(href="/mobile/create") Create Mobile
+    br
+    a(href="/mobile/update") Update Mobile
+    br
+    a(href="/mobile/delete") Delete Mobile
+    br
+    div(ng-view)
+        block content
+    script(src='/javascripts/jquery-1.11.1.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/angular/angular.js')
+    script(src='/lib/angular-route.min.js')
+    script(src='/lib/angular-route.min.js.map')
+    script(src='/myApp.js')
+    script(src='/indexPage/indexCtrl.controller.js')
+    script(src='/mobilesListPage/mobilesListCtrl.controller.js')
+    script(src='/services/getMobilesList.js')

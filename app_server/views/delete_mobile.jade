@@ -1,0 +1,14 @@
+extends layout
+
+block content
+      .row
+        .col-xs-12.col-md-6
+            form.form-horizontal(action="", method="post", role="form")
+                .form-group
+                  label.col-xs-10.col-sm-2.control-label(for="mobile") Mobiles
+                  .col-xs-12.col-sm-2
+                        select#mobile.form-control.input-sm(name="mobile")
+                            each mobile in mobiles_list
+                                option(value=mobile._id) #{mobile.name}
+                button.btn.btn-default.pull-right Delete mobile
+        .col-xs-12.col-md-4

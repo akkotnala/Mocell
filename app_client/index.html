@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobiles App</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="/css/slick-theme.css" />
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="/css/nouislider.min.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!-- TOP HEADER -->
+        <div id="top-header">
+            <div class="container">
+                <ul class="header-links pull-left">
+                    <li><a href="#"><i class="fa fa-phone"></i> +1 519-781-8233</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> chaitu966743@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker"></i> 123 XYZ STREET , On Ca</a></li>
+                </ul>
+                <ul class="header-links pull-right">
+                    <li><a href="#"><i class="fa fa-dollar"></i> CAD</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /TOP HEADER -->
+
+        <!-- MAIN HEADER -->
+        <div id="header">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- LOGO -->
+                    <div class="col-md-12">
+                        <div class="header-logo">
+                            <a href="#" class="logo">
+									<img src="./img/logo.png" style="height: 65px" alt="">
+								</a>
+                        </div>
+                    </div>
+                    <!-- /LOGO -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+
+
+
+    <nav id="navigation" class="navbar navbar-default">
+        <div class="container container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="main-nav nav navbar-nav">
+                    <li><a style="color: #2B2D42;" href="/">Home</a></li>
+                    <li><a style="color: #2B2D42;" href="/mobile/read">Mobiles List</a></li>
+                    <li><a style="color: #2B2D42;" href="/mobile/create">Create Category</a></li>
+                    <li><a style="color: #2B2D42;" href="/mobile/update">Update Category</a></li>
+                    <li><a style="color: #2B2D42;" href="/mobile/delete">Delete Category</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- /NAVIGATION -->
+
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row" ng-view>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <!-- top footer -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">About Us</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                            <ul class="footer-links">
+                                <li><a href="#"><i class="fa fa-map-marker"></i>123 XYZ STREET , On Ca</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+1 519-781-8233</a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o"></i> chaitu966743@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Categories</h3>
+                            <ul class="footer-links">
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/mobile/read">Mobiles List</a></li>
+                                <li><a href="/mobile/create">Create Mobile</a></li>
+                                <li><a href="/mobile/update">Update Mobile</a></li>
+                                <li><a href="/mobile/delete">Delete Mobile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Information</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Orders and Returns</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-xs-6">
+                        <div class="footer">
+                            <h3 class="footer-title">Service</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">View Cart</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Track My Order</a></li>
+                                <li><a href="#">Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /top footer -->
+
+        <!-- bottom footer -->
+        <div id="bottom-footer" class="section">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span class="copyright">
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="" target="_blank">MoCell</a>
+							</span>
+                    </div>
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /bottom footer -->
+    </footer>
+    <!-- /FOOTER -->
+
+    <!-- jQuery Plugins -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/jquery.zoom.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="/javascripts/jquery-1.11.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/angular/angular.js"></script>
+    <script src="/lib/angular-route.min.js"></script>
+    <script src="/lib/ui-bootstrap-custom-2.5.0.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.0.js"></script>
+    <script src="/myApp.js"></script>
+    <script src="/indexPage/indexCtrl.controller.js"></script>
+    <script src="/mobilesListPage/mobilesListCtrl.controller.js"></script>
+    <script src="/createPage/createCtrl.controller.js"></script>
+    <script src="/updatePage/updateCtrl.controller.js"></script>
+    <script src="/deletePage/deleteCtrl.controller.js"></script>
+    <script src="/mobileInfoPage/mobilesInfoCtrl.controller.js"></script>
+    <script src="/reviewModal/reviewModal.controller.js"></script>
+    <script src="/services/getMobilesList.js"></script>
+    <script src="/services/addMobile.js"></script>
+    <script src="/services/updateMobileService.js"></script>
+    <script src="/services/deleteMobileService.js"></script>
+    <script src="/services/getMobileByIdService.js"></script>
+    <script src="/services/addReviewService.js"></script>
+    <script src="/directives/ratingStars/ratingStars.directive.js"></script>
+
+</body>
+
+
+</html>
